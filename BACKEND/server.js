@@ -24,8 +24,10 @@ connection.once("open",() =>{
 })
 
 const customerRouter = require("./routes/customer.js");
+const bankingRouter = require("./routes/gzbank.js");
 
 app.use("/customer",customerRouter);
+app.use("/gzbank",bankingRouter);
 
 app.listen(PORT,() => {
     console.log(`Server is up and running on http://localhost:${PORT}`)
